@@ -6,6 +6,8 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import reportWebVitals from "./reportWebVitals";
 
 import App from "./App";
+import Login from "./components/auth/Login";
+import Signup from "./components/auth/Signup";
 import Dashboard from "./dashboard/Dashboard";
 import Measure from "./dashboard/Measure";
 import Manage from "./dashboard/Manage";
@@ -17,6 +19,14 @@ const router = createBrowserRouter([
     path: "/",
     element: <App />,
     errorElement: <ErrorPage />
+  },
+  {
+    path: "/login",
+    element: <Login />,
+  },
+  {
+    path: "/signup",
+    element: <Signup />,
   },
   {
     path: "/dashboard",
