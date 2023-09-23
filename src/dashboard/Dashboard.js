@@ -1,11 +1,13 @@
 import React from "react";
 
-import Navbar1 from "./components/Navbar";
+import Navbar from "./components/Navbar";
+import Overall from "./components/Overall";
 
 const Dashboard = () => {
   return (
     <>
-      <Navbar1 />
+      <Navbar />
+      <Overall />
     </>
   );
 };

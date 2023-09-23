@@ -1,9 +1,9 @@
 import React from "react";
-import Button from '@mui/material/Button';
-import { Outlet, Link } from "react-router-dom";
+import Button from "@mui/material/Button";
+import { Link } from "react-router-dom";
 
-import "./navbar1.css";
-const Navbar1 = () => {
+import "./navbar.css";
+const Navbar = () => {
   return (
     <nav class="navbar navbar-expand-lg navbar-dark cd ">
       <div class="container">
@@ -12,22 +12,16 @@ const Navbar1 = () => {
             {/* <a class="nav-link active black-link" aria-current="page" href="#">
               Home
             </a> */}
-            <Button>Home</Button>  
+            <Button color="secondary">Home</Button>
           </li>
           <li class="nav-item">
-            <a class="nav-link black-link" href="#">
-              Measure
-            </a>
+            <Button color="secondary">Measure</Button>
           </li>
           <li class="nav-item">
-            <a class="nav-link black-link" href="#">
-              Manage
-            </a>
+            <Button color="secondary">Manage</Button>
           </li>
           <li class="nav-item">
-            <Link to={`dashboard`} class="nav-link black-link">
-              Report
-            </Link>
+            <Button color="secondary">Report</Button>
           </li>
         </ul>
       </div>
@@ -35,4 +29,4 @@ const Navbar1 = () => {
   );
 };
 
-export default Navbar1;
+export default Navbar;
