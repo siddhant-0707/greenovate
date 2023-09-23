@@ -1,0 +1,61 @@
+@media (max-width: 1450px) {
+  .main {
+    padding-left: 15rem !important;
+    padding-right: 15rem !important;
+  }
+}
+@media (max-width: 1136px) {
+  .main {
+    padding-left: 10rem !important;
+    padding-right: 10rem !important;
+  }
+}
+@media (max-width: 950px) {
+  .main {
+    padding-left: 5rem !important;
+    padding-right: 5rem !important;
+  }
+}
+
+.section3 {
+  padding: 2rem 28rem;
+  background-color: #003138;
+  padding-bottom: 10rem;
+}
+
+.section3 .heading {
+  font-size: 0.707rem;
+  font-family: Ppneuemontreal, sans-serif;
+  color: #f3f8f6;
+}
+
+.imgDown {
+}
+.section3 .headingContent {
+  color: #fff;
+  font-size: 90.4px;
+  line-height: 96px;
+  font-weight: 500;
+  font-family: Ppneuemontreal, sans-serif;
+}
+
+.data {
+  padding-top: 5rem;
+  color: #f3f8f6;
+  line-height: 24px;
+  font-family: Ppneuemontreal, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  width: 80%;
+}
+
+.data1 {
+  color: #f3f8f6;
+  font-size: 16px;
+  font-family: Ppneuemontreal, sans-serif;
+  font-weight: 600;
+  padding: 9px 0;
+}
+
+.broker {
+}

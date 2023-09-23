@@ -1,11 +1,24 @@
-.section1 {
-  padding: 2rem 28rem;
-  background-color: #171f20;
-  position: relative; /*Make the section relative for absolute positioning of images */
-}
 
-.section1-text {
-  padding-bottom: 100px;
+@media(max-width:1450px) {
+  .main{
+      padding-left: 15rem !important;
+      padding-right: 15rem !important;
+
+    }
+}
+@media(max-width:1136px) {
+  .main{
+      padding-left: 10rem !important;
+      padding-right: 10rem !important;
+
+    }
+}
+@media(max-width:950px) {
+  .main{
+      padding-left: 5rem !important;
+      padding-right: 5rem !important;
+
+    }
 }
 
 .section1 h1 {
@@ -25,37 +38,39 @@
   font-family: Ppneuemontreal, sans-serif;
   color: #fff;
   margin-bottom: 0;
-  line-height: 0.5rem;
+  line-height: 1.5rem;
 }
 
-.image-container {
+.imagecontainer {
   position: relative;
   top: 0;
-  left: 175px;
+  overflow: hidden;
 }
 
-.lifestyle-image {
+.lifestyleimage {
   position: relative;
   z-index: 1;
 }
 
-.impact-chart {
+.impactchart {
   position: absolute;
   top: 50px;
   left: 440px;
   z-index: 2;
 }
 
-.category-card {
+.categorycard {
   position: absolute;
   top: 250px;
   left: 660px;
   z-index: 3;
 }
 
-.emissions-card {
+.emissionscard {
   position: absolute;
   top: 340px;
   left: 300px;
   z-index: 4;
 }
+
+
