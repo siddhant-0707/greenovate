@@ -2,11 +2,11 @@ import React from "react";
 import Button from "@mui/material/Button";
 import { Link } from "react-router-dom";
 
-import "./navbar.css";
+import css from  "./navbar.module.css";
 const Navbar = () => {
   return (
     <nav class="navbar navbar-expand-lg navbar-dark cd ">
-      <div class="container">
+      <div className={css.container}>
         <ul class="navbar-nav">
           <li class="nav-item">
             <Button color="secondary">
