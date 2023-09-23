@@ -1,14 +1,28 @@
-.section2 {
-  padding: 2rem 28rem;
 
-  background-color: #c7dddf;
+@media(max-width:1450px) {
+  .main{
+      padding-left: 15rem !important;
+      padding-right: 15rem !important;
+
+    }
 }
-#no:hover {
-  #im {
-    filter: blur(0px);
-    -webkit-filter: blur(0px);
-  }
+@media(max-width:1136px) {
+  .main{
+      padding-left: 10rem !important;
+      padding-right: 10rem !important;
+
+    }
 }
+@media(max-width:950px) {
+  .main{
+      padding-left: 5rem !important;
+      padding-right: 5rem !important;
+
+    }
+}
+
+
+
 
 .heading {
   font-size: 0.707rem;
@@ -28,7 +42,7 @@
   font-weight: 500;
   font-family: Ppneuemontreal, sans-serif;
 }
-
+/* 
 .valueprop-card .measure {
   will-change: transform;
   transform: translate3d(-1.91475px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg)
@@ -57,9 +71,9 @@
 .home-product .measure {
   will-change: opacity;
   opacity: 1;
-}
+} */
 
-.Content-heading {
+.Contentheading {
   padding: 7rem 0 2rem 0;
   font-size: 22.6px;
   font-weight: 600;
@@ -90,26 +104,29 @@
 .img {
   height: 600px;
   padding-bottom: 2px;
-  position: relative;
-  left: 5rem;
 }
 .image1 {
+  position: relative;
   filter: blur(2px);
   -webkit-filter: blur(2px);
+  width: 100%;
 }
 
-.image3 {
-  position: absolute;
-  filter: blur(2px);
-  -webkit-filter: blur(2px);
-  top: 2200px;
-  left: 1007px;
-}
 .image2 {
   filter: blur(2px);
   -webkit-filter: blur(2px);
-  bottom: 260px;
-  left: 150px;
+  right: 2rem;
+  bottom: 15rem;
+  position: relative;
+  width: 100%;
+}
+.image3 {
+  position: relative;
+  filter: blur(2px);
+  -webkit-filter: blur(2px);
+  bottom: 25rem;
+  width: 100%;
+  margin-bottom: -350px;
 }
 
 .image1:hover {

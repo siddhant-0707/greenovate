@@ -1,16 +1,14 @@
 import React from "react";
-import { Outlet, Link } from "react-router-dom";
-
 import "./navbar.css";
 const Navbar = () => {
   return (
-    <nav class="navbar navbar-expand-lg navbar-dark cd personal">
+    <nav class="navbar navbar-expand-lg navbar-dark cd ">
       <div class="container-fluid">
         <a class="navbar-brand" href="#">
           Greenovate
         </a>
         <button
-          class="navbar-toggler"
+          className="navbar-toggler"
           type="button"
           data-bs-toggle="collapse"
           data-bs-target="#navbarNav"
@@ -18,39 +16,30 @@ const Navbar = () => {
           aria-expanded="false"
           aria-label="Toggle navigation"
         >
-          <span class="navbar-toggler-icon"></span>
+          <span className="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav">
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">
+        <div className="collapse navbar-collapse" id="navbarNav">
+          <ul className="navbar-nav">
+            <li className="nav-item">
+              <a className="nav-link active" aria-current="page" href="#">
                 Home
               </a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">
+            <li className="nav-item">
+              <a className="nav-link" href="#">
                 Contact
               </a>
             </li>
             <li class="nav-item">
-              <Link to={`login`} class="nav-link">
+              <a class="nav-link" href="#">
                 Login
-              </Link>
-            </li>
-            <li class="nav-item">
-              <Link to={`signup`} class="nav-link">
-                Signup
-              </Link>
-            </li>
-            <li class="nav-item">
-              <Link to={`dashboard`} class="nav-link">
-                Dashboard
-              </Link>
+              </a>
             </li>
           </ul>
         </div>
       </div>
     </nav>
+          </Container>
   );
 };
 
