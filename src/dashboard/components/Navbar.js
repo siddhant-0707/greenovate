@@ -9,19 +9,24 @@ const Navbar = () => {
       <div class="container">
         <ul class="navbar-nav">
           <li class="nav-item">
-            {/* <a class="nav-link active black-link" aria-current="page" href="#">
-              Home
-            </a> */}
-            <Button color="secondary">Home</Button>
+            <Button color="secondary">
+              <Link to={`/dashboard`}>Home</Link>
+            </Button>
           </li>
           <li class="nav-item">
-            <Button color="secondary">Measure</Button>
+            <Button color="secondary">
+              <Link to={`/dashboard/measure`}>Measure</Link>
+            </Button>
           </li>
           <li class="nav-item">
-            <Button color="secondary">Manage</Button>
+            <Button color="secondary">
+              <Link to={`/dashboard/manage`}>Manage</Link>
+            </Button>
           </li>
           <li class="nav-item">
-            <Button color="secondary">Report</Button>
+            <Button color="secondary">
+              <Link to={`/dashboard/report`}>Report</Link>
+            </Button>
           </li>
         </ul>
       </div>

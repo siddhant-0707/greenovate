@@ -7,6 +7,9 @@ import reportWebVitals from "./reportWebVitals";
 
 import App from "./App";
 import Dashboard from "./dashboard/Dashboard";
+import Measure from "./dashboard/Measure";
+import Manage from "./dashboard/Manage";
+import Report from "./dashboard/Report";
 import ErrorPage from "./error-page";
 
 const router = createBrowserRouter([
@@ -18,6 +21,18 @@ const router = createBrowserRouter([
   {
     path: "/dashboard",
     element: <Dashboard />,
+  },
+  {
+    path: "/dashboard/measure",
+    element: <Measure />,
+  },
+  {
+    path: "/dashboard/manage",
+    element: <Manage />,
+  },
+  {
+    path: "/dashboard/report",
+    element: <Report />,
   },
 ]);
 
