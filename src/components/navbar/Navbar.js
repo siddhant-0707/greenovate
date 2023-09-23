@@ -4,7 +4,7 @@ import { Outlet, Link } from "react-router-dom";
 import "./navbar.css";
 const Navbar = () => {
   return (
-    <nav class="navbar navbar-expand-lg navbar-dark cd ">
+    <nav class="navbar navbar-expand-lg navbar-dark cd personal">
       <div class="container-fluid">
         <a class="navbar-brand" href="#">
           Greenovate
