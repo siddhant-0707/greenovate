@@ -1,0 +1,61 @@
+.section1 {
+  padding: 2rem 28rem;
+  background-color: #171f20;
+  position: relative; /*Make the section relative for absolute positioning of images */
+}
+
+.section1-text {
+  padding-bottom: 100px;
+}
+
+.section1 h1 {
+  overflow: visible;
+  margin-top: 0;
+  margin-bottom: 32px;
+  margin-left: -6px;
+  color: #fff;
+  font-size: 90.4px;
+  line-height: 96px;
+  font-weight: 500;
+  font-family: Ppneuemontreal, sans-serif;
+}
+
+.section1 p {
+  font-size: 1.2rem;
+  font-family: Ppneuemontreal, sans-serif;
+  color: #fff;
+  margin-bottom: 0;
+  line-height: 0.5rem;
+}
+
+.image-container {
+  position: relative;
+  top: 0;
+  left: 175px;
+}
+
+.lifestyle-image {
+  position: relative;
+  z-index: 1;
+}
+
+.impact-chart {
+  position: absolute;
+  top: 50px;
+  left: 440px;
+  z-index: 2;
+}
+
+.category-card {
+  position: absolute;
+  top: 250px;
+  left: 660px;
+  z-index: 3;
+}
+
+.emissions-card {
+  position: absolute;
+  top: 340px;
+  left: 300px;
+  z-index: 4;
+}
