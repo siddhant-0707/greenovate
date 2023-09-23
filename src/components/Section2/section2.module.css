@@ -94,12 +94,11 @@
 }
 
 .number {
-  padding: 9.5rem 0 8rem ;
+  padding: 9.5rem 0 8rem;
   font-size: 129.8px;
   color: #00181c;
   line-height: 128px;
   font-family: Ppneuemontreal, sans-serif;
-  
 }
 
 .img {
@@ -145,5 +144,3 @@
   filter: blur(0px);
   -webkit-filter: blur(0px);
 }
-
-

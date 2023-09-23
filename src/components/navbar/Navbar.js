@@ -1,16 +1,11 @@
 import React from "react";
-import css from"./navbar.module.css";
-import { Button, Container } from "react-bootstrap";
-
+import "./navbar.css";
 const Navbar = () => {
   return (
-    <Container fluid className={`${css.navbar} p-0`}>
-    <nav  className="navbar navbar-expand-lg navbar-dark" style={{padding:"2rem 25rem 0"}}>
-      <div className="container-fluid">
-        <a className="navbar-brand" href="#">
-          <span style={{fontWeight:"800"}}>
-            Greenovate
-            </span>
+    <nav class="navbar navbar-expand-lg navbar-dark cd ">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+          Greenovate
         </a>
         <button
           className="navbar-toggler"
@@ -35,11 +30,10 @@ const Navbar = () => {
                 Contact
               </a>
             </li>
-            <li className="nav-item">
-              {/* <a className="nav-link" href="#">
+            <li class="nav-item">
+              <a class="nav-link" href="#">
                 Login
-              </a> */}
-              <Button variant="warning">Login</Button>
+              </a>
             </li>
           </ul>
         </div>

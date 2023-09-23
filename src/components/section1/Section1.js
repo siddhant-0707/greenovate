@@ -4,6 +4,22 @@ import { animateScroll as scroll } from "react-scroll";
 import { Container, Row } from "react-bootstrap";
 
 const Section1 = () => {
+  const handleScroll = () => {
+    const scrollY = window.scrollY;
+    const translateY = `translateY(-${scrollY * 0.2}px)`;
+    document.querySelectorAll(".animate-on-scroll").forEach((element) => {
+      element.style.transform = translateY;
+    });
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
     <Container
       className={css.main}

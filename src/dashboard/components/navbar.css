@@ -1,0 +1,14 @@
+.container {
+  background-color: #ffffff;
+  font-family: Ppneuemontreal, sans-serif;
+  /* padding-top: 4px; */
+  padding-bottom: 17px;
+}
+
+.black-link {
+  color: black !important;
+}
+
+.box {
+  background-color: '#bababa';
+}
