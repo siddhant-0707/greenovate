@@ -1,4 +1,6 @@
 import React from "react";
+import { Outlet, Link } from "react-router-dom";
+
 import "./navbar.css";
 const Navbar = () => {
   return (
@@ -34,6 +36,11 @@ const Navbar = () => {
               <a class="nav-link" href="#">
                 Login
               </a>
+            </li>
+            <li class="nav-item">
+              <Link to={`dashboard`} class="nav-link">
+                Dashboard
+              </Link>
             </li>
           </ul>
         </div>
