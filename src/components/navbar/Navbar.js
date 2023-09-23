@@ -1,31 +1,42 @@
 import React from "react";
 import "./navbar.css";
-import Link from "next/link";
-
 const Navbar = () => {
   return (
-    <nav className="custom-navbar">
-      <div className="container">
-        <Link className="navbar-brand" href="#">
+    <nav class="navbar navbar-expand-lg navbar-dark cd ">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">
           Greenovate
-        </Link>
-        <ul className="nav-links">
-          <li className="nav-item">
-            <Link href="#" className="nav-link">
-              Home
-            </Link>
-          </li>
-          <li className="nav-item">
-            <Link href="#" className="nav-link">
-              Contact
-            </Link>
-          </li>
-          <li className="nav-item">
-            <Link href="#" className="nav-link">
-              Login
-            </Link>
-          </li>
-        </ul>
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">
+                Home
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">
+                Contact
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">
+                Login
+              </a>
+            </li>
+          </ul>
+        </div>
       </div>
     </nav>
   );
