@@ -42,7 +42,7 @@
   font-weight: 500;
   font-family: Ppneuemontreal, sans-serif;
 }
-
+/* 
 .valueprop-card .measure {
   will-change: transform;
   transform: translate3d(-1.91475px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg)
@@ -71,7 +71,7 @@
 .home-product .measure {
   will-change: opacity;
   opacity: 1;
-}
+} */
 
 .Contentheading {
   padding: 7rem 0 2rem 0;
@@ -127,6 +127,7 @@
   -webkit-filter: blur(2px);
   bottom: 25rem;
   width: 100%;
+  margin-bottom: -350px;
 }
 
 .image1:hover {
