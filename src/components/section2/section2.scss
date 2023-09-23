@@ -3,11 +3,11 @@
 
   background-color: #c7dddf;
 }
-#no:hover{
-  #im{
-  filter: blur(0px);
-  -webkit-filter: blur(0px); 
-}
+#no:hover {
+  #im {
+    filter: blur(0px);
+    -webkit-filter: blur(0px);
+  }
 }
 
 .heading {
@@ -80,19 +80,18 @@
 }
 
 .number {
-  padding: 9.5rem 0 8rem ;
+  padding: 9.5rem 0 8rem;
   font-size: 129.8px;
   color: #00181c;
   line-height: 128px;
   font-family: Ppneuemontreal, sans-serif;
-  
 }
 
 .img {
   height: 600px;
   padding-bottom: 2px;
   position: relative;
-  left:5rem;
+  left: 5rem;
 }
 .image1 {
   filter: blur(2px);
@@ -128,5 +127,3 @@
   filter: blur(0px);
   -webkit-filter: blur(0px);
 }
-
-
