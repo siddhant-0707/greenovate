@@ -1,12 +1,25 @@
-import { React, useState } from "react";
+import { React, useState, useEffect } from "react";
 import axios from "axios";
 import Navbar from "./components/Navbar";
+import data from "./data.json";
+import sortedEmissionFactors from "./emission-program";
 
 const Measure = () => {
   const [fields, setFields] = useState([
     { name: "", emission: "", result: "" },
   ]);
   const [year, setYear] = useState(2023);
+
+  useEffect(() => {
+    // Initialize fields based on the JSON data
+    setFields(
+      data.emissionRecords.map((record) => ({
+        name: record.subsubfactor_name,
+        emission: record.input_value.toString(),
+        result: record.net_emission.toString(),
+      }))
+    );
+  }, []);
 
   const addField = () => {
     setFields([...fields, { name: "", emission: "", result: "" }]);
@@ -24,10 +37,14 @@ const Measure = () => {
     newFields[index][name] = value;
 
     // Calculate the resultant emission value based on your algorithm
-    const calculatedResult = calculateResult(
-      newFields[index].emission,
-      newFields[index].spend
-    );
+    // const calculatedResult = calculateResult(
+    //   newFields[index].emission,
+    //   newFields[index].spend
+    // );
+    // newFields[index].result = calculatedResult;
+
+    // setFields(newFields);
+    const calculatedResult = calculateResult(value, index);
     newFields[index].result = calculatedResult;
 
     setFields(newFields);
@@ -37,8 +54,13 @@ const Measure = () => {
     setYear(event.target.value);
   };
 
-  const calculateResult = (emission) => {
-    return parseFloat(emission);
+  const calculateResult = (emission, index) => {
+    if (index >= 0 && index < sortedEmissionFactors.length) {
+      const emissionFactor = sortedEmissionFactors[index];
+      return parseFloat(emission) * emissionFactor;
+    } else {
+      return 0;
+    }
   };
 
   const formatDataForAPI = () => {
@@ -67,10 +89,9 @@ const Measure = () => {
       url: "https://greenovate-server.vercel.app/api/emission/insert-records",
       headers: {
         "Content-Type": "application/json",
-        Authorization:
-          "Bearer " + localStorage.getItem("token"),
+        Authorization: "Bearer " + localStorage.getItem("token"),
       },
-      data: apiData
+      data: apiData,
     };
 
     axios

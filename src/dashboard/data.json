@@ -1,0 +1,576 @@
+{
+	"year": 2023,
+	"emissionRecords": [
+		{
+			"record_year": 2023,
+			"subsubfactor_name": "diesel",
+			"subfactor_name": "Car",
+			"factor_name": "Vehicles",
+			"input_value": 5000,
+			"net_emission": 854
+		},
+		{
+			"record_year": 2023,
+			"subsubfactor_name": "gasoline",
+			"subfactor_name": "Car",
+			"factor_name": "Vehicles",
+			"input_value": 200,
+			"net_emission": 34.1
+		},
+		{
+			"record_year": 2023,
+			"subsubfactor_name": "ev",
+			"subfactor_name": "Car",
+			"factor_name": "Vehicles",
+			"input_value": 0,
+			"net_emission": 0
+		},
+		{
+			"record_year": 2023,
+			"subsubfactor_name": "cng",
+			"subfactor_name": "Car",
+			"factor_name": "Vehicles",
+			"input_value": 0,
+			"net_emission": 0
+		},
+		{
+			"record_year": 2023,
+			"subsubfactor_name": "lpg",
+			"subfactor_name": "Car",
+			"factor_name": "Vehicles",
+			"input_value": 0,
+			"net_emission": 0
+		},
+		{
+			"record_year": 2023,
+			"subsubfactor_name": "passenger-km",
+			"subfactor_name": "Bus",
+			"factor_name": "Vehicles",
+			"input_value": 0,
+			"net_emission": 0
+		},
+		{
+			"record_year": 2023,
+			"subsubfactor_name": "Battery EV vans - average (up to 3.5 tonnes)",
+			"subfactor_name": "Vans",
+			"factor_name": "Vehicles",
+			"input_value": 0,
+			"net_emission": 0
+		},
+		{
+			"record_year": 2023,
+			"subsubfactor_name": "Petrol van - Class I (up to 1.305 tonnes)",
+			"subfactor_name": "Vans",
+			"factor_name": "Vehicles",
+			"input_value": 0,
+			"net_emission": 0
+		},
+		{
+			"record_year": 2023,
+			"subsubfactor_name": "Diesel van - Class I (up to 1.305 tonnes)",
+			"subfactor_name": "Vans",
+			"factor_name": "Vehicles",
+			"input_value": 0,
+			"net_emission": 0
+		},
+		{
+			"record_year": 2023,
+			"subsubfactor_name": "Diesel van - Class II (1.305 to 1.74 tonnes)",
+			"subfactor_name": "Vans",
+			"factor_name": "Vehicles",
+			"input_value": 0,
+			"net_emission": 0
+		},
+		{
+			"record_year": 2023,
+			"subsubfactor_name": "Petrol van - Class II (1.305 to 1.74 tonnes)",
+			"subfactor_name": "Vans",
+			"factor_name": "Vehicles",
+			"input_value": 0,
+			"net_emission": 0
+		},
+		{
+			"record_year": 2023,
+			"subsubfactor_name": "Diesel van - Class III (1.74 to 3.5 tonnes)",
+			"subfactor_name": "Vans",
+			"factor_name": "Vehicles",
+			"input_value": 0,
+			"net_emission": 0
+		},
+		{
+			"record_year": 2023,
+			"subsubfactor_name": "Petrol van - Class III (1.74 to 3.5 tonnes)",
+			"subfactor_name": "Vans",
+			"factor_name": "Vehicles",
+			"input_value": 0,
+			"net_emission": 0
+		},
+		{
+			"record_year": 2023,
+			"subsubfactor_name": "Warehousing and support services for transportation",
+			"subfactor_name": "Transportation",
+			"factor_name": "Vehicles",
+			"input_value": 0,
+			"net_emission": 0
+		},
+		{
+			"record_year": 2023,
+			"subsubfactor_name": "Upstream transportation and distribution",
+			"subfactor_name": "Transportation",
+			"factor_name": "Vehicles",
+			"input_value": 0,
+			"net_emission": 0
+		},
+		{
+			"record_year": 2023,
+			"subsubfactor_name": "Air freight",
+			"subfactor_name": "Transportation",
+			"factor_name": "Vehicles",
+			"input_value": 0,
+			"net_emission": 0
+		},
+		{
+			"record_year": 2023,
+			"subsubfactor_name": "Water freight transport services",
+			"subfactor_name": "Transportation",
+			"factor_name": "Vehicles",
+			"input_value": 0,
+			"net_emission": 0
+		},
+		{
+			"record_year": 2023,
+			"subsubfactor_name": "Rail (freight)",
+			"subfactor_name": "Transportation",
+			"factor_name": "Vehicles",
+			"input_value": 0,
+			"net_emission": 0
+		},
+		{
+			"record_year": 2023,
+			"subsubfactor_name": "Road Freight/Inland transport",
+			"subfactor_name": "Transportation",
+			"factor_name": "Vehicles",
+			"input_value": 0,
+			"net_emission": 0
+		},
+		{
+			"record_year": 2023,
+			"subsubfactor_name": "other",
+			"subfactor_name": "Transportation",
+			"factor_name": "Vehicles",
+			"input_value": 0,
+			"net_emission": 0
+		},
+		{
+			"record_year": 2023,
+			"subsubfactor_name": "Grid Electricity - Grid Supply",
+			"subfactor_name": "Grid Electricity",
+			"factor_name": "Building",
+			"input_value": 0,
+			"net_emission": 0
+		},
+		{
+			"record_year": 2023,
+			"subsubfactor_name": "Energy Generation - Coal",
+			"subfactor_name": "Energy Generation",
+			"factor_name": "Building",
+			"input_value": 0,
+			"net_emission": 0
+		},
+		{
+			"record_year": 2023,
+			"subsubfactor_name": "Energy Generation - Hydro",
+			"subfactor_name": "Energy Generation",
+			"factor_name": "Building",
+			"input_value": 0,
+			"net_emission": 0
+		},
+		{
+			"record_year": 2023,
+			"subsubfactor_name": "Energy Generation - Nuclear",
+			"subfactor_name": "Energy Generation",
+			"factor_name": "Building",
+			"input_value": 0,
+			"net_emission": 0
+		},
+		{
+			"record_year": 2023,
+			"subsubfactor_name": "Energy Generation - Petroleum and Oil Derivatives",
+			"subfactor_name": "Energy Generation",
+			"factor_name": "Building",
+			"input_value": 0,
+			"net_emission": 0
+		},
+		{
+			"record_year": 2023,
+			"subsubfactor_name": "Energy Generation - Wind",
+			"subfactor_name": "Energy Generation",
+			"factor_name": "Building",
+			"input_value": 0,
+			"net_emission": 0
+		},
+		{
+			"record_year": 2023,
+			"subsubfactor_name": "Energy Generation - Other",
+			"subfactor_name": "Energy Generation",
+			"factor_name": "Building",
+			"input_value": 0,
+			"net_emission": 0
+		},
+		{
+			"record_year": 2023,
+			"subsubfactor_name": "Gas - Blast Furnace Gas",
+			"subfactor_name": "Gas",
+			"factor_name": "Building",
+			"input_value": 0,
+			"net_emission": 0
+		},
+		{
+			"record_year": 2023,
+			"subsubfactor_name": "Gas - Coke Oven Gas",
+			"subfactor_name": "Gas",
+			"factor_name": "Building",
+			"input_value": 0,
+			"net_emission": 0
+		},
+		{
+			"record_year": 2023,
+			"subsubfactor_name": "Gas - Gas Works Gas",
+			"subfactor_name": "Gas",
+			"factor_name": "Building",
+			"input_value": 0,
+			"net_emission": 0
+		},
+		{
+			"record_year": 2023,
+			"subsubfactor_name": "Gas - Natural Gas Liquids",
+			"subfactor_name": "Gas",
+			"factor_name": "Building",
+			"input_value": 0,
+			"net_emission": 0
+		},
+		{
+			"record_year": 2023,
+			"subsubfactor_name": "Gas - Gas/Diesel Oil",
+			"subfactor_name": "Gas",
+			"factor_name": "Building",
+			"input_value": 0,
+			"net_emission": 0
+		},
+		{
+			"record_year": 2023,
+			"subsubfactor_name": "Pipeline - Pipeline Transport",
+			"subfactor_name": "Pipeline",
+			"factor_name": "Building",
+			"input_value": 0,
+			"net_emission": 0
+		},
+		{
+			"record_year": 2023,
+			"subsubfactor_name": "Facility - Education Facility",
+			"subfactor_name": "Facility",
+			"factor_name": "Building",
+			"input_value": 0,
+			"net_emission": 0
+		},
+		{
+			"record_year": 2023,
+			"subsubfactor_name": "Facility - Food Sale Facility",
+			"subfactor_name": "Facility",
+			"factor_name": "Building",
+			"input_value": 0,
+			"net_emission": 0
+		},
+		{
+			"record_year": 2023,
+			"subsubfactor_name": "Facility - Healthcare Facility",
+			"subfactor_name": "Facility",
+			"factor_name": "Building",
+			"input_value": 0,
+			"net_emission": 0
+		},
+		{
+			"record_year": 2023,
+			"subsubfactor_name": "Facility - Lodging Facility",
+			"subfactor_name": "Facility",
+			"factor_name": "Building",
+			"input_value": 0,
+			"net_emission": 0
+		},
+		{
+			"record_year": 2023,
+			"subsubfactor_name": "Facility - Manufacturing Facility",
+			"subfactor_name": "Facility",
+			"factor_name": "Building",
+			"input_value": 0,
+			"net_emission": 0
+		},
+		{
+			"record_year": 2023,
+			"subsubfactor_name": "Facility - Office Facility",
+			"subfactor_name": "Facility",
+			"factor_name": "Building",
+			"input_value": 0,
+			"net_emission": 0
+		},
+		{
+			"record_year": 2023,
+			"subsubfactor_name": "Facility - Other Facility",
+			"subfactor_name": "Facility",
+			"factor_name": "Building",
+			"input_value": 0,
+			"net_emission": 0
+		},
+		{
+			"record_year": 2023,
+			"subsubfactor_name": "Fugitive Gases - Purchased Heat and Steam",
+			"subfactor_name": "Fugitive Gases",
+			"factor_name": "Building",
+			"input_value": 0,
+			"net_emission": 0
+		},
+		{
+			"record_year": 2023,
+			"subsubfactor_name": "Fugitive Gases - Domestic Heating Oil/Coal/Coke",
+			"subfactor_name": "Fugitive Gases",
+			"factor_name": "Building",
+			"input_value": 0,
+			"net_emission": 0
+		},
+		{
+			"record_year": 2023,
+			"subsubfactor_name": "Accommodation - Hotel and Restaurant Services",
+			"subfactor_name": "Accomodation",
+			"factor_name": "Building",
+			"input_value": 0,
+			"net_emission": 0
+		},
+		{
+			"record_year": 2023,
+			"subsubfactor_name": "Water Supply",
+			"subfactor_name": "Default",
+			"factor_name": "Water",
+			"input_value": 0,
+			"net_emission": 0
+		},
+		{
+			"record_year": 2023,
+			"subsubfactor_name": "Water Treatment",
+			"subfactor_name": "Default",
+			"factor_name": "Water",
+			"input_value": 0,
+			"net_emission": 0
+		},
+		{
+			"record_year": 2023,
+			"subsubfactor_name": "Collected and Purified Water/Distribution of Water (Services)",
+			"subfactor_name": "Default",
+			"factor_name": "Water",
+			"input_value": 0,
+			"net_emission": 0
+		},
+		{
+			"record_year": 2023,
+			"subsubfactor_name": "Electrical Machinery and Apparatus",
+			"subfactor_name": "Default",
+			"factor_name": "Equipment",
+			"input_value": 0,
+			"net_emission": 0
+		},
+		{
+			"record_year": 2023,
+			"subsubfactor_name": "Medical/Precision and Optical Instruments/Watches and Clocks",
+			"subfactor_name": "Default",
+			"factor_name": "Equipment",
+			"input_value": 0,
+			"net_emission": 0
+		},
+		{
+			"record_year": 2023,
+			"subsubfactor_name": "Radio/Television and Communication Equipment and Apparatus",
+			"subfactor_name": "Default",
+			"factor_name": "Equipment",
+			"input_value": 0,
+			"net_emission": 0
+		},
+		{
+			"record_year": 2023,
+			"subsubfactor_name": "Rental of Machinery and Equipment (without operator) and of Personal and Household Goods (Services)",
+			"subfactor_name": "Default",
+			"factor_name": "Equipment",
+			"input_value": 0,
+			"net_emission": 0
+		},
+		{
+			"record_year": 2023,
+			"subsubfactor_name": "Machinery and Equipment (Not Elsewhere Specified)",
+			"subfactor_name": "Default",
+			"factor_name": "Equipment",
+			"input_value": 0,
+			"net_emission": 0
+		},
+		{
+			"record_year": 2023,
+			"subsubfactor_name": "Office Machinery and Computers",
+			"subfactor_name": "Default",
+			"factor_name": "Equipment",
+			"input_value": 0,
+			"net_emission": 0
+		},
+		{
+			"record_year": 2023,
+			"subsubfactor_name": "Private Households with Employed Persons",
+			"subfactor_name": "Default",
+			"factor_name": "Product",
+			"input_value": 0,
+			"net_emission": 0
+		},
+		{
+			"record_year": 2023,
+			"subsubfactor_name": "Beverages",
+			"subfactor_name": "Default",
+			"factor_name": "Product",
+			"input_value": 0,
+			"net_emission": 0
+		},
+		{
+			"record_year": 2023,
+			"subsubfactor_name": "Dairy Products",
+			"subfactor_name": "Default",
+			"factor_name": "Product",
+			"input_value": 0,
+			"net_emission": 0
+		},
+		{
+			"record_year": 2023,
+			"subsubfactor_name": "Fish Products",
+			"subfactor_name": "Default",
+			"factor_name": "Product",
+			"input_value": 0,
+			"net_emission": 0
+		},
+		{
+			"record_year": 2023,
+			"subsubfactor_name": "Food Products (Not Elsewhere Specified)",
+			"subfactor_name": "Default",
+			"factor_name": "Product",
+			"input_value": 0,
+			"net_emission": 0
+		},
+		{
+			"record_year": 2023,
+			"subsubfactor_name": "Furniture/Other Manufactured Goods (Not Elsewhere Specified)",
+			"subfactor_name": "Default",
+			"factor_name": "Product",
+			"input_value": 0,
+			"net_emission": 0
+		},
+		{
+			"record_year": 2023,
+			"subsubfactor_name": "Leather/Leather and Footwear",
+			"subfactor_name": "Default",
+			"factor_name": "Product",
+			"input_value": 0,
+			"net_emission": 0
+		},
+		{
+			"record_year": 2023,
+			"subsubfactor_name": "Meat Products",
+			"subfactor_name": "Default",
+			"factor_name": "Product",
+			"input_value": 0,
+			"net_emission": 0
+		},
+		{
+			"record_year": 2023,
+			"subsubfactor_name": "Processed Rice",
+			"subfactor_name": "Default",
+			"factor_name": "Product",
+			"input_value": 0,
+			"net_emission": 0
+		},
+		{
+			"record_year": 2023,
+			"subsubfactor_name": "Sugar",
+			"subfactor_name": "Default",
+			"factor_name": "Product",
+			"input_value": 0,
+			"net_emission": 0
+		},
+		{
+			"record_year": 2023,
+			"subsubfactor_name": "Vegetable Oils and Fats",
+			"subfactor_name": "Default",
+			"factor_name": "Product",
+			"input_value": 0,
+			"net_emission": 0
+		},
+		{
+			"record_year": 2023,
+			"subsubfactor_name": "Wearing Apparel/Furs",
+			"subfactor_name": "Default",
+			"factor_name": "Product",
+			"input_value": 0,
+			"net_emission": 0
+		},
+		{
+			"record_year": 2023,
+			"subsubfactor_name": "Retail Trade (Except of Motor Vehicles and Motorcycles) and Repair of Personal and Household Goods (Services)",
+			"subfactor_name": "Default",
+			"factor_name": "Product",
+			"input_value": 0,
+			"net_emission": 0
+		},
+		{
+			"record_year": 2023,
+			"subsubfactor_name": "Retail Trade Except of Motor Vehicles and Motorcycles/Repair of Household Goods",
+			"subfactor_name": "Default",
+			"factor_name": "Product",
+			"input_value": 0,
+			"net_emission": 0
+		},
+		{
+			"record_year": 2023,
+			"subsubfactor_name": "Paper and Paper Products",
+			"subfactor_name": "Default",
+			"factor_name": "Product",
+			"input_value": 0,
+			"net_emission": 0
+		},
+		{
+			"record_year": 2023,
+			"subsubfactor_name": "Textiles",
+			"subfactor_name": "Default",
+			"factor_name": "Product",
+			"input_value": 0,
+			"net_emission": 0
+		}
+	],
+	"factorSummaries": [
+		{
+			"factor_id": 1,
+			"factor_name": "Vehicles",
+			"total_emission": 888.1
+		},
+		{
+			"factor_id": 2,
+			"factor_name": "Building",
+			"total_emission": 0
+		},
+		{
+			"factor_id": 3,
+			"factor_name": "Water",
+			"total_emission": 0
+		},
+		{
+			"factor_id": 5,
+			"factor_name": "Equipment",
+			"total_emission": 0
+		},
+		{
+			"factor_id": 6,
+			"factor_name": "Product",
+			"total_emission": 0
+		}
+	]
+}
