@@ -84,7 +84,7 @@ const Measure = () => {
   return (
     <>
       <Navbar />
-      <Container fluid style={{ padding: "5rem 25rem",backgroundColor:"#F0F0F0",height:"90vh" }} className={css.main}>
+      <Container fluid style={{ padding: "5rem 25rem 16rem",backgroundColor:"#F0F0F0" }} className={css.main}>
         <Row>
           <Row>
             <Col>
