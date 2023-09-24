@@ -4,10 +4,6 @@ import { Outlet, Link } from "react-router-dom";
 import "../../components/navbar/navbar.css";
 
 const Navbar = () => {
-  // useEffect(() => {
-
-  // }, []);
-
   const handleLogout = () => {
     localStorage.removeItem("token");
     window.location.href = "/";

@@ -12,7 +12,7 @@ const Section1 = () => {
     >
       <Row className={css.section1}>
         <Row className="section1-text pb-5">
-          <h1>Comprehensive sustainability software for every business</h1>
+          <h1>Comprehensive sustainability software for every institutions</h1>
           <p style={{ width: "40%" }}>
             Take the guesswork out of calculating your carbon footprint.
           </p>
