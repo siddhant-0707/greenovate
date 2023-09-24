@@ -28,6 +28,7 @@ function Login() {
         if (response.status === 200) {
           setLoginSuccess(true);
           localStorage.setItem("token", response.data.token);
+          window.location.href = "/dashboard";
         }
       })
       .catch(function (error) {
