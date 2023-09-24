@@ -15,11 +15,11 @@ const Section3 = () => {
         <Row>
           <Col xs={8}>
             <h1 className={css.headingContent}>
-              The sustainability management software for top companies
+              The sustainability management software for top institutions
             </h1>
 
             <p className={css.data}>
-            Our personlized enviromental reports helps companies meet their targets easily and help them become friendly for enviroment.
+            Our personlized enviromental reports helps institutions meet their targets easily and help them become friendly for enviroment.
             </p>
             <p className={css.data1}>Greenovate</p>
             <img

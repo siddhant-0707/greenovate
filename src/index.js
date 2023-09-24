@@ -10,7 +10,7 @@ import App from "./App";
 import Login from "./components/auth/Login";
 import Signup from "./components/auth/Signup";
 import Dashboard from "./dashboard/Dashboard";
-import Measure from "./dashboard/Measure";
+import Measure from "./dashboard/measure/Measure";
 import Manage from "./dashboard/Manage";
 import Report from "./dashboard/Report";
 import ErrorPage from "./error-page";
