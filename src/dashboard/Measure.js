@@ -124,8 +124,8 @@ const Measure = () => {
               type="text"
               name="name"
               value={field.name}
-              onChange={(e) => handleFieldChange(index, e)}
-              required
+              // onChange={(e) => handleFieldChange(index, e)}
+              readonly
             />
             <label>Emission Value:</label>
             <input

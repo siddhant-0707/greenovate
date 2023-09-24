@@ -23,9 +23,9 @@ const Navbar = () => {
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">
+              <Link to={`/`} class="nav-link">
                 Home
-              </a>
+              </Link>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#">
