@@ -9,7 +9,7 @@ const Section2 = () => {
    
       <p className={css.heading}>HOW IT WORKS</p>
       <h1 className={css.headingContent}>
-        Future-proof your business— take climate action
+        Future-proof your institutions— take climate action
       </h1>
       <div className="row">
         <div className="col text-col">

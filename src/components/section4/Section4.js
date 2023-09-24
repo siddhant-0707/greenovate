@@ -11,7 +11,7 @@ const Section4 = () => {
       <Row>
         <Col>
           <h1 className={css.headingContent}>Start your path to net-zero.</h1>
-          <Button variant="dark">Dashboard</Button>
+          <Button variant="dark" href="/dashboard">Dashboard</Button>
         </Col>
         <Col >
           <img

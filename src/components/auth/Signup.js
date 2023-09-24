@@ -1,13 +1,19 @@
 import React, { useState } from "react";
 import axios from "axios";
-
+import css from "./styles.module.css";
 import Navbar from "../navbar/Navbar";
+import { Button, Container, Form, Row } from "react-bootstrap";
+import { useNavigate } from "react-router-dom";
 
 function Signup() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [orgName, setOrgName] = useState("");
   const [signupSuccess, setSignupSuccess] = useState(false);
+  let navigator = useNavigate();
+  if(signupSuccess){
+    navigator("/dashboard");
+  }
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -40,45 +46,84 @@ function Signup() {
   return (
     <div>
       <Navbar />
-      <h2>Sign Up</h2>
-      {signupSuccess ? (
-        <div>
-          <p>Signup successful! You can now log in.</p>
-        </div>
-      ) : (
-        <form onSubmit={handleSubmit}>
-          <div>
-            <label>Email:</label>
-            <input
+      <Container
+        fluid
+        style={{
+          height: "100vh",
+          paddingTop: "5rem",
+          backgroundColor: "#F0F0F0",
+          padding: "5rem 25rem 0",
+        }}
+        className={css.main}
+      >
+        <Row>
+          <h2>Sign Up</h2>
+        </Row>
+        <Row>
+          <form onSubmit={handleSubmit}>
+            <Form.Group className="mb-3" controlId="formBasicEmail">
+              <Form.Label>Email address</Form.Label>
+              <Form.Control
+                type="email"
+                placeholder="Enter email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                required
+              />
+              <Form.Text className="text-muted">
+                We'll never share your email with anyone else.
+              </Form.Text>
+            </Form.Group>
+            {/* <label>Email:</label>
+              <input
               type="email"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              required
-            />
-          </div>
-          <div>
-            <label>Password:</label>
-            <input
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                required
+              /> */}
+
+            <Form.Group className="mb-3" controlId="formBasicPassword">
+              <Form.Label>Password</Form.Label>
+              <Form.Control
+                type="password"
+                placeholder="Password"
+                onChange={(e) => setPassword(e.target.value)}
+                value={password}
+                required
+              />
+            </Form.Group>
+            {/* <label>Password:</label>
+              <input
               type="password"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
               required
-            />
-          </div>
-          <div>
-            <label>Organization Name:</label>
-            <input
+            /> */}
+
+            <Form.Group className="mb-3" controlId="formBasicPassword">
+              <Form.Label>Organization Name</Form.Label>
+              <Form.Control
+                type="text"
+                placeholder="OrganizationName"
+                onChange={(e) => setOrgName(e.target.value)}
+                value={orgName}
+                required
+              />
+            </Form.Group>
+            {/* <label>Organization Name:</label>
+              <input
               type="text"
               value={orgName}
               onChange={(e) => setOrgName(e.target.value)}
               required
-            />
-          </div>
-          <div>
-            <button type="submit">Sign Up</button>
-          </div>
-        </form>
-      )}
+            /> */}
+
+            <Button variant="warning" type="submit">
+              Sign Up
+            </Button>
+          </form>
+        </Row>
+      </Container>
     </div>
   );
 }
