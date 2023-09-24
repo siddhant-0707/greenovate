@@ -22,13 +22,13 @@ const Section3 = () => {
             Our personlized enviromental reports helps institutions meet their targets easily and help them become friendly for enviroment.
             </p>
             <p className={css.data1}>Greenovate</p>
-            <img
+            {/* <img
               className={css.broker}
               loading="lazy"
               height="32"
               alt="Interactive Brokers logo"
               src="https://assets.website-files.com/6266b5e20215f61058171191/62793df31bebd9a3eb1e63a9_logo-interactivebrokers.svg"
-            />
+            /> */}
           </Col>
           <Col style={{overflow:"hidden"}}  xs={4}>
             <img className={css.imgDown} src="./img.png" alt="" />
