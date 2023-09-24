@@ -1,54 +1,69 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Outlet, Link } from "react-router-dom";
 
 import "./navbar.css";
+
 const Navbar = () => {
+  const isAuthenticated = !!localStorage.getItem("token");
+
+  // useEffect(() => {
+
+  // }, []);
+
+  const handleDashboardClick = () => {
+    const token = localStorage.getItem("token");
+    console.log("Token:", token);
+  };
+
+  const handleLogout = () => {
+    localStorage.removeItem("token");
+    window.location.href = "/";
+  };
+
   return (
-    <nav class="navbar navbar-expand-lg navbar-dark cd personal">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="#">
-          Greenovate
-        </a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
-          aria-controls="navbarNav"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav">
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">
-                Home
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">
-                Contact
-              </a>
-            </li>
-            <li class="nav-item">
-              <Link to={`/login`} class="nav-link">
-                Login
-              </Link>
-            </li>
-            <li class="nav-item">
-              <Link to={`/signup`} class="nav-link">
-                Signup
-              </Link>
-            </li>
-            <li class="nav-item">
-              <Link to={`/dashboard`} class="nav-link">
+    <nav className="navbar navbar-expand-lg navbar-dark cd personal">
+      {/* ... Your existing Navbar code ... */}
+      <div className="collapse navbar-collapse" id="navbarNav">
+        <ul className="navbar-nav">
+          <li className="nav-item">
+            <Link to={`/`} className="nav-link">
+              Home
+            </Link>
+          </li>
+          <li className="nav-item">
+            <a className="nav-link" href="#">
+              Contact
+            </a>
+          </li>
+          <li className="nav-item">
+            <Link to={`/login`} className="nav-link">
+              Login
+            </Link>
+          </li>
+          <li className="nav-item">
+            <Link to={`/signup`} className="nav-link">
+              Signup
+            </Link>
+          </li>
+          {isAuthenticated && (
+            <li className="nav-item">
+              <Link
+                to={`/dashboard`}
+                className="nav-link"
+                onClick={handleDashboardClick}
+              >
                 Dashboard
               </Link>
             </li>
-          </ul>
-        </div>
+          )}
+          {isAuthenticated && (
+            <li className="nav-item">
+              <button onClick={handleLogout} className="nav-link btn btn-link">
+                Logout
+              </button>
+            </li>
+          )}
+        </ul>
       </div>
     </nav>
   );
