@@ -35,6 +35,7 @@ function Signup() {
         console.log(response.data);
         if (response.status === 200) {
           setSignupSuccess(true);
+          window.location.href = "/login";
         }
       })
       .catch(function (error) {

@@ -6,10 +6,6 @@ import "./navbar.css";
 const Navbar = () => {
   const isAuthenticated = !!localStorage.getItem("token");
 
-  // useEffect(() => {
-
-  // }, []);
-
   const handleDashboardClick = () => {
     const token = localStorage.getItem("token");
     console.log("Token:", token);

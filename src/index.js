@@ -12,7 +12,7 @@ import Signup from "./components/auth/Signup";
 import Dashboard from "./dashboard/Dashboard";
 import Measure from "./dashboard/measure/Measure";
 import Manage from "./dashboard/Manage";
-import Report from "./dashboard/Report";
+import Report from "./dashboard/report/Report";
 import ErrorPage from "./error-page";
 
 const router = createBrowserRouter([
