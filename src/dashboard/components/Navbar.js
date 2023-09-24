@@ -1,32 +1,50 @@
-import React from "react";
-import Button from "@mui/material/Button";
-import { Link } from "react-router-dom";
+import React, { useEffect } from "react";
+import { Outlet, Link } from "react-router-dom";
 
-import css from  "./navbar.module.css";
+import "../../components/navbar/navbar.css";
+
 const Navbar = () => {
+  // useEffect(() => {
+
+  // }, []);
+
+  const handleLogout = () => {
+    localStorage.removeItem("token");
+    window.location.href = "/";
+  };
+
   return (
-    <nav class="navbar navbar-expand-lg navbar-dark cd ">
-      <div className={css.container}>
-        <ul class="navbar-nav">
-          <li class="nav-item">
-            <Button color="secondary">
-              <Link to={`/dashboard`}>Home</Link>
-            </Button>
+    <nav className="navbar navbar-expand-lg navbar-dark cd personal">
+      {/* ... Your existing Navbar code ... */}
+      <div className="collapse navbar-collapse" id="navbarNav">
+        <ul className="navbar-nav">
+          <li className="nav-item">
+            <Link to={`/dashboard`} className="nav-link">
+              Home
+            </Link>
           </li>
-          <li class="nav-item">
-            <Button color="secondary">
-              <Link to={`/dashboard/measure`}>Measure</Link>
-            </Button>
-          </li>
-          <li class="nav-item">
-            <Button color="secondary">
-              <Link to={`/dashboard/manage`}>Manage</Link>
-            </Button>
-          </li>
-          <li class="nav-item">
-            <Button color="secondary">
-              <Link to={`/dashboard/report`}>Report</Link>
-            </Button>
+
+            <li className="nav-item">
+              <Link to={`/dashboard/manage`} className="nav-link">
+                Manage
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link to={`/dashboard/measure`} className="nav-link">
+                Measure
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link to={`/dashboard/report`} className="nav-link">
+                Report
+              </Link>
+            </li>
+         
+
+          <li className="nav-item">
+            <button onClick={handleLogout} className="nav-link btn btn-link">
+              Logout
+            </button>
           </li>
         </ul>
       </div>
