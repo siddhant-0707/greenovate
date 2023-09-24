@@ -7,7 +7,6 @@ function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [loginSuccess, setLoginSuccess] = useState(false);
-  const [loginError, setLoginError] = useState(false);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -33,7 +32,6 @@ function Login() {
       })
       .catch(function (error) {
         console.error(error);
-        setLoginError(true);
       });
   };
 
@@ -46,38 +44,29 @@ function Login() {
           <p>Successful login!</p>
         </div>
       ) : (
-        <div>
-          {loginError && (
-            <div>
-              <p style={{ color: "red" }}>
-                Wrong email or password. Please try again.
-              </p>
-            </div>
-          )}
-          <form onSubmit={handleSubmit}>
-            <div>
-              <label>Email:</label>
-              <input
-                type="email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                required
-              />
-            </div>
-            <div>
-              <label>Password:</label>
-              <input
-                type="password"
-                value={password}
-                onChange={(e) => setPassword(e.target.value)}
-                required
-              />
-            </div>
-            <div>
-              <button type="submit">Login</button>
-            </div>
-          </form>
-        </div>
+        <form onSubmit={handleSubmit}>
+          <div>
+            <label>Email:</label>
+            <input
+              type="email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              required
+            />
+          </div>
+          <div>
+            <label>Password:</label>
+            <input
+              type="password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              required
+            />
+          </div>
+          <div>
+            <button type="submit">Login</button>
+          </div>
+        </form>
       )}
     </div>
   );
