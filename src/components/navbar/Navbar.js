@@ -30,21 +30,20 @@ const Navbar = () => {
               Home
             </Link>
           </li>
-          <li className="nav-item">
-            <a className="nav-link" href="#">
-              Contact
-            </a>
-          </li>
-          <li className="nav-item">
-            <Link to={`/login`} className="nav-link">
-              Login
-            </Link>
-          </li>
-          <li className="nav-item">
-            <Link to={`/signup`} className="nav-link">
-              Signup
-            </Link>
-          </li>
+          {!isAuthenticated && (
+            <>
+              <li className="nav-item">
+                <Link to={`/login`} className="nav-link">
+                  Login
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link to={`/signup`} className="nav-link">
+                  Signup
+                </Link>
+              </li>
+            </>
+          )}
           {isAuthenticated && (
             <li className="nav-item">
               <Link
