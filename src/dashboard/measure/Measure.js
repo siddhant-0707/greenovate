@@ -50,7 +50,7 @@ const Measure = () => {
     },
     Accomodation: { HotelandRestaurantServices: 0 },
   });
-/*   const [vehiclesData, setVehiclesData] = useState({
+  const [vehiclesData, setVehiclesData] = useState({
     quarter: 1,
     Car: { lpg: 0, cng: 0, ev: 0, gasoline: 0, diesel: 0 },
     Bus: {
@@ -74,9 +74,77 @@ const Measure = () => {
       Upstreamtransportationanddistribution: 0,
       Warehousingandsupportservicesfortransportation: 0,
     },
-  }); */
+  });
+
+  const [waterData, setWaterData] = useState({
+    quarter: 1,
+    Default: {
+      CollectedandPurifiedWaterDistributionofWater: 0,
+      WaterTreatment: 0,
+      WaterSupply: 0,
+    },
+  });
+
+  const [equipmentData, setEquipmentData] = useState({
+    quarter: 1,
+    Default: {
+      OfficeMachineryandComputers: 0,
+      MachineryandEquipment: 0,
+      RentalofMachineryandEquipmentandofPersonalandHouseholdGoods: 0,
+      RadioTelevisionandCommunicationEquipmentandApparatus: 0,
+      MedicalPrecisionandOpticalInstrumentsWatchesandClocks: 0,
+      ElectricalMachineryandApparatus: 0,
+    },
+  });
+
+  const [productData, setProductData] = useState({
+    quarter: 1,
+    Default: {
+      Textiles: 0,
+      PaperandPaperProducts: 0,
+      RetailTradeExceptofMotorVehiclesandMotorcyclesRepairofHouseholdGoods: 0,
+      RetailTradeandRepairofPersonalandHouseholdGoods: 0,
+      WearingApparelFurs: 0,
+      VegetableOilsandFats: 0,
+      Sugar: 0,
+
+      ProcessedRice: 0,
+      MeatProducts: 0,
+      LeatherandFootwear: 0,
+      FurnitureOtherManufacturedGoods: 0,
+      FoodProducts: 0,
+      FishProducts: 0,
+      DairyProducts: 0,
+      Beverages: 0,
+      PrivateHouseholdswithEmployedPersons: 0,
+    },
+  });
   const handleDataChange = (property, value) => {
     setBuildingData((prevState) => ({
+      ...prevState,
+      [property]: value,
+    }));
+  };
+  const handleDataChangeVehicles = (property, value) => {
+    setVehiclesData((prevState) => ({
+      ...prevState,
+      [property]: value,
+    }));
+  };
+  const handleDataChangeWater = (property, value) => {
+    setWaterData((prevState) => ({
+      ...prevState,
+      [property]: value,
+    }));
+  };
+  const handleDataChangeEquipment = (property, value) => {
+    setEquipmentData((prevState) => ({
+      ...prevState,
+      [property]: value,
+    }));
+  };
+  const handleDataChangeProduct = (property, value) => {
+    setProductData((prevState) => ({
       ...prevState,
       [property]: value,
     }));
@@ -98,7 +166,7 @@ const Measure = () => {
                   borderColor: "#053B50",
                 }}
                 onClick={() => {
-                  console.log(buildingData.Accomodation);
+                  console.log(productData);
                 }}
               >
                 Save
@@ -517,7 +585,7 @@ const Measure = () => {
                       aria-describedby="basic-addon2"
                       onChange={(e) =>
                         handleDataChange("Accomodation", {
-                          ...buildingData.Facility,
+                          ...buildingData.Accomodation,
                           HotelandRestaurantServices: e.target.value,
                         })
                       }
@@ -552,10 +620,9 @@ const Measure = () => {
                       aria-label="Recipient's username"
                       aria-describedby="basic-addon2"
                       onChange={(e) =>
-                        handleDataChange("EnergyGeneration", {
-                          ...buildingData.EnergyGeneration,
-                          EnergyGenerationPetroleumandOilDerivatives:
-                            e.target.value,
+                        handleDataChangeVehicles("Car", {
+                          ...vehiclesData.Car,
+                          lpg: e.target.value,
                         })
                       }
                     />
@@ -567,9 +634,9 @@ const Measure = () => {
                       aria-label="Recipient's username"
                       aria-describedby="basic-addon2"
                       onChange={(e) =>
-                        handleDataChange("EnergyGeneration", {
-                          ...buildingData.EnergyGeneration,
-                          EnergyGenerationNuclear: e.target.value,
+                        handleDataChangeVehicles("Car", {
+                          ...vehiclesData.Car,
+                          cng: e.target.value,
                         })
                       }
                     />
@@ -581,9 +648,9 @@ const Measure = () => {
                       aria-label="Recipient's username"
                       aria-describedby="basic-addon2"
                       onChange={(e) =>
-                        handleDataChange("EnergyGeneration", {
-                          ...buildingData.EnergyGeneration,
-                          EnergyGenerationWind: e.target.value,
+                        handleDataChangeVehicles("Car", {
+                          ...vehiclesData.Car,
+                          ev: e.target.value,
                         })
                       }
                     />
@@ -595,9 +662,9 @@ const Measure = () => {
                       aria-label="Recipient's username"
                       aria-describedby="basic-addon2"
                       onChange={(e) =>
-                        handleDataChange("EnergyGeneration", {
-                          ...buildingData.EnergyGeneration,
-                          EnergyGenerationHydro: e.target.value,
+                        handleDataChangeVehicles("Car", {
+                          ...vehiclesData.Car,
+                          gasoline: e.target.value,
                         })
                       }
                     />
@@ -609,9 +676,9 @@ const Measure = () => {
                       aria-label="Recipient's username"
                       aria-describedby="basic-addon2"
                       onChange={(e) =>
-                        handleDataChange("EnergyGeneration", {
-                          ...buildingData.EnergyGeneration,
-                          EnergyGenerationCoal: e.target.value,
+                        handleDataChangeVehicles("Car", {
+                          ...vehiclesData.Car,
+                          diesel: e.target.value,
                         })
                       }
                     />
@@ -625,9 +692,9 @@ const Measure = () => {
                       aria-label="Recipient's username"
                       aria-describedby="basic-addon2"
                       onChange={(e) =>
-                        handleDataChange("Gas", {
-                          ...buildingData.Gas,
-                          GasDieselOil: e.target.value,
+                        handleDataChangeVehicles("Bus", {
+                          ...vehiclesData.Bus,
+                          passengerkm: e.target.value,
                         })
                       }
                     />
@@ -643,9 +710,9 @@ const Measure = () => {
                       aria-label="Recipient's username"
                       aria-describedby="basic-addon2"
                       onChange={(e) =>
-                        handleDataChange("Pipeline", {
-                          ...buildingData.Pipeline,
-                          PipelineTransport: e.target.value,
+                        handleDataChangeVehicles("Vans", {
+                          ...vehiclesData.Vans,
+                          PetrolVanClassIII: e.target.value,
                         })
                       }
                     />
@@ -660,9 +727,9 @@ const Measure = () => {
                       aria-label="Recipient's username"
                       aria-describedby="basic-addon2"
                       onChange={(e) =>
-                        handleDataChange("Facility", {
-                          ...buildingData.Facility,
-                          OfficeFacility: e.target.value,
+                        handleDataChangeVehicles("Vans", {
+                          ...vehiclesData.Vans,
+                          DieselVanClassIII: e.target.value,
                         })
                       }
                     />
@@ -676,9 +743,9 @@ const Measure = () => {
                       aria-label="Recipient's username"
                       aria-describedby="basic-addon2"
                       onChange={(e) =>
-                        handleDataChange("Facility", {
-                          ...buildingData.Facility,
-                          ManufacturingFacility: e.target.value,
+                        handleDataChangeVehicles("Vans", {
+                          ...vehiclesData.Vans,
+                          PetrolVanClassII: e.target.value,
                         })
                       }
                     />
@@ -692,9 +759,9 @@ const Measure = () => {
                       aria-label="Recipient's username"
                       aria-describedby="basic-addon2"
                       onChange={(e) =>
-                        handleDataChange("Facility", {
-                          ...buildingData.Facility,
-                          LodgingFacility: e.target.value,
+                        handleDataChangeVehicles("Vans", {
+                          ...vehiclesData.Vans,
+                          DieselVanClassII: e.target.value,
                         })
                       }
                     />
@@ -708,9 +775,9 @@ const Measure = () => {
                       aria-label="Recipient's username"
                       aria-describedby="basic-addon2"
                       onChange={(e) =>
-                        handleDataChange("Facility", {
-                          ...buildingData.Facility,
-                          HealthcareFacility: e.target.value,
+                        handleDataChangeVehicles("Vans", {
+                          ...vehiclesData.Vans,
+                          DieselVanClassI: e.target.value,
                         })
                       }
                     />
@@ -724,9 +791,9 @@ const Measure = () => {
                       aria-label="Recipient's username"
                       aria-describedby="basic-addon2"
                       onChange={(e) =>
-                        handleDataChange("Facility", {
-                          ...buildingData.Facility,
-                          FoodSaleFacility: e.target.value,
+                        handleDataChangeVehicles("Vans", {
+                          ...vehiclesData.Vans,
+                          PetrolVanClassI: e.target.value,
                         })
                       }
                     />
@@ -740,9 +807,9 @@ const Measure = () => {
                       aria-label="Recipient's username"
                       aria-describedby="basic-addon2"
                       onChange={(e) =>
-                        handleDataChange("Facility", {
-                          ...buildingData.Facility,
-                          EducationFacility: e.target.value,
+                        handleDataChangeVehicles("Vans", {
+                          ...vehiclesData.Vans,
+                          BatteryEVvans: e.target.value,
                         })
                       }
                     />
@@ -757,9 +824,9 @@ const Measure = () => {
                       aria-label="Recipient's username"
                       aria-describedby="basic-addon2"
                       onChange={(e) =>
-                        handleDataChange("FugitiveGases", {
-                          ...buildingData.FugitiveGases,
-                          DomesticHeatingOilCoalCoke: e.target.value,
+                        handleDataChangeVehicles("Transportation", {
+                          ...vehiclesData.Transportation,
+                          RoadFreightInlandtransport: e.target.value,
                         })
                       }
                     />
@@ -773,9 +840,9 @@ const Measure = () => {
                       aria-label="Recipient's username"
                       aria-describedby="basic-addon2"
                       onChange={(e) =>
-                        handleDataChange("FugitiveGases", {
-                          ...buildingData.FugitiveGases,
-                          PurchasedHeatandSteam: e.target.value,
+                        handleDataChangeVehicles("Transportation", {
+                          ...vehiclesData.Transportation,
+                          Rail: e.target.value,
                         })
                       }
                     />
@@ -789,9 +856,9 @@ const Measure = () => {
                       aria-label="Recipient's username"
                       aria-describedby="basic-addon2"
                       onChange={(e) =>
-                        handleDataChange("Accomodation", {
-                          ...buildingData.Facility,
-                          HotelandRestaurantServices: e.target.value,
+                        handleDataChangeVehicles("Transportation", {
+                          ...vehiclesData.Transportation,
+                          Waterfreighttransportservices: e.target.value,
                         })
                       }
                     />
@@ -805,9 +872,9 @@ const Measure = () => {
                       aria-label="Recipient's username"
                       aria-describedby="basic-addon2"
                       onChange={(e) =>
-                        handleDataChange("FugitiveGases", {
-                          ...buildingData.FugitiveGases,
-                          DomesticHeatingOilCoalCoke: e.target.value,
+                        handleDataChangeVehicles("Transportation", {
+                          ...vehiclesData.Transportation,
+                          Airfreight: e.target.value,
                         })
                       }
                     />
@@ -821,9 +888,9 @@ const Measure = () => {
                       aria-label="Recipient's username"
                       aria-describedby="basic-addon2"
                       onChange={(e) =>
-                        handleDataChange("FugitiveGases", {
-                          ...buildingData.FugitiveGases,
-                          PurchasedHeatandSteam: e.target.value,
+                        handleDataChangeVehicles("Transportation", {
+                          ...vehiclesData.Transportation,
+                          Upstreamtransportationanddistribution: e.target.value,
                         })
                       }
                     />
@@ -835,9 +902,10 @@ const Measure = () => {
                       aria-label="Recipient's username"
                       aria-describedby="basic-addon2"
                       onChange={(e) =>
-                        handleDataChange("Accomodation", {
-                          ...buildingData.Facility,
-                          HotelandRestaurantServices: e.target.value,
+                        handleDataChangeVehicles("Transportation", {
+                          ...vehiclesData.Transportation,
+                          Warehousingandsupportservicesfortransportation:
+                            e.target.value,
                         })
                       }
                     />
@@ -849,9 +917,9 @@ const Measure = () => {
                       aria-label="Recipient's username"
                       aria-describedby="basic-addon2"
                       onChange={(e) =>
-                        handleDataChange("Accomodation", {
-                          ...buildingData.Facility,
-                          HotelandRestaurantServices: e.target.value,
+                        handleDataChangeVehicles("Transportation", {
+                          ...vehiclesData.Transportation,
+                          other: e.target.value,
                         })
                       }
                     />
@@ -885,9 +953,9 @@ const Measure = () => {
                       aria-label="Recipient's username"
                       aria-describedby="basic-addon2"
                       onChange={(e) =>
-                        handleDataChange("EnergyGeneration", {
-                          ...buildingData.EnergyGeneration,
-                          EnergyGenerationPetroleumandOilDerivatives:
+                        handleDataChangeWater("Default", {
+                          ...waterData.Default,
+                          CollectedandPurifiedWaterDistributionofWater:
                             e.target.value,
                         })
                       }
@@ -900,9 +968,9 @@ const Measure = () => {
                       aria-label="Recipient's username"
                       aria-describedby="basic-addon2"
                       onChange={(e) =>
-                        handleDataChange("EnergyGeneration", {
-                          ...buildingData.EnergyGeneration,
-                          EnergyGenerationNuclear: e.target.value,
+                        handleDataChangeWater("Default", {
+                          ...waterData.Default,
+                          WaterTreatment: e.target.value,
                         })
                       }
                     />
@@ -914,9 +982,9 @@ const Measure = () => {
                       aria-label="Recipient's username"
                       aria-describedby="basic-addon2"
                       onChange={(e) =>
-                        handleDataChange("EnergyGeneration", {
-                          ...buildingData.EnergyGeneration,
-                          EnergyGenerationWind: e.target.value,
+                        handleDataChangeWater("Default", {
+                          ...waterData.Default,
+                          WaterSupply: e.target.value,
                         })
                       }
                     />
@@ -951,10 +1019,9 @@ const Measure = () => {
                       aria-label="Recipient's username"
                       aria-describedby="basic-addon2"
                       onChange={(e) =>
-                        handleDataChange("EnergyGeneration", {
-                          ...buildingData.EnergyGeneration,
-                          EnergyGenerationPetroleumandOilDerivatives:
-                            e.target.value,
+                        handleDataChangeEquipment("Default", {
+                          ...equipmentData.Default,
+                          OfficeMachineryandComputers: e.target.value,
                         })
                       }
                     />
@@ -966,9 +1033,9 @@ const Measure = () => {
                       aria-label="Recipient's username"
                       aria-describedby="basic-addon2"
                       onChange={(e) =>
-                        handleDataChange("EnergyGeneration", {
-                          ...buildingData.EnergyGeneration,
-                          EnergyGenerationNuclear: e.target.value,
+                        handleDataChangeEquipment("Default", {
+                          ...equipmentData.Default,
+                          MachineryandEquipment: e.target.value,
                         })
                       }
                     />
@@ -980,9 +1047,10 @@ const Measure = () => {
                       aria-label="Recipient's username"
                       aria-describedby="basic-addon2"
                       onChange={(e) =>
-                        handleDataChange("EnergyGeneration", {
-                          ...buildingData.EnergyGeneration,
-                          EnergyGenerationWind: e.target.value,
+                        handleDataChangeEquipment("Default", {
+                          ...equipmentData.Default,
+                          RentalofMachineryandEquipmentandofPersonalandHouseholdGoods:
+                            e.target.value,
                         })
                       }
                     />
@@ -994,9 +1062,9 @@ const Measure = () => {
                       aria-label="Recipient's username"
                       aria-describedby="basic-addon2"
                       onChange={(e) =>
-                        handleDataChange("EnergyGeneration", {
-                          ...buildingData.EnergyGeneration,
-                          EnergyGenerationPetroleumandOilDerivatives:
+                        handleDataChangeEquipment("Default", {
+                          ...equipmentData.Default,
+                          RadioTelevisionandCommunicationEquipmentandApparatus:
                             e.target.value,
                         })
                       }
@@ -1009,9 +1077,10 @@ const Measure = () => {
                       aria-label="Recipient's username"
                       aria-describedby="basic-addon2"
                       onChange={(e) =>
-                        handleDataChange("EnergyGeneration", {
-                          ...buildingData.EnergyGeneration,
-                          EnergyGenerationNuclear: e.target.value,
+                        handleDataChangeEquipment("Default", {
+                          ...equipmentData.Default,
+                          MedicalPrecisionandOpticalInstrumentsWatchesandClocks:
+                            e.target.value,
                         })
                       }
                     />
@@ -1023,9 +1092,9 @@ const Measure = () => {
                       aria-label="Recipient's username"
                       aria-describedby="basic-addon2"
                       onChange={(e) =>
-                        handleDataChange("EnergyGeneration", {
-                          ...buildingData.EnergyGeneration,
-                          EnergyGenerationWind: e.target.value,
+                        handleDataChangeEquipment("Default", {
+                          ...equipmentData.Default,
+                          ElectricalMachineryandApparatus: e.target.value,
                         })
                       }
                     />
@@ -1060,10 +1129,9 @@ const Measure = () => {
                       aria-label="Recipient's username"
                       aria-describedby="basic-addon2"
                       onChange={(e) =>
-                        handleDataChange("EnergyGeneration", {
-                          ...buildingData.EnergyGeneration,
-                          EnergyGenerationPetroleumandOilDerivatives:
-                            e.target.value,
+                        handleDataChangeProduct("Default", {
+                          ...productData.Default,
+                          Textiles: e.target.value,
                         })
                       }
                     />
@@ -1075,9 +1143,9 @@ const Measure = () => {
                       aria-label="Recipient's username"
                       aria-describedby="basic-addon2"
                       onChange={(e) =>
-                        handleDataChange("EnergyGeneration", {
-                          ...buildingData.EnergyGeneration,
-                          EnergyGenerationNuclear: e.target.value,
+                        handleDataChangeProduct("Default", {
+                          ...productData.Default,
+                          PaperandPaperProducts: e.target.value,
                         })
                       }
                     />
@@ -1089,9 +1157,10 @@ const Measure = () => {
                       aria-label="Recipient's username"
                       aria-describedby="basic-addon2"
                       onChange={(e) =>
-                        handleDataChange("EnergyGeneration", {
-                          ...buildingData.EnergyGeneration,
-                          EnergyGenerationWind: e.target.value,
+                        handleDataChangeProduct("Default", {
+                          ...productData.Default,
+                          RetailTradeExceptofMotorVehiclesandMotorcyclesRepairofHouseholdGoods:
+                            e.target.value,
                         })
                       }
                     />
@@ -1103,9 +1172,9 @@ const Measure = () => {
                       aria-label="Recipient's username"
                       aria-describedby="basic-addon2"
                       onChange={(e) =>
-                        handleDataChange("EnergyGeneration", {
-                          ...buildingData.EnergyGeneration,
-                          EnergyGenerationPetroleumandOilDerivatives:
+                        handleDataChangeProduct("Default", {
+                          ...productData.Default,
+                          RetailTradeandRepairofPersonalandHouseholdGoods:
                             e.target.value,
                         })
                       }
@@ -1118,9 +1187,9 @@ const Measure = () => {
                       aria-label="Recipient's username"
                       aria-describedby="basic-addon2"
                       onChange={(e) =>
-                        handleDataChange("EnergyGeneration", {
-                          ...buildingData.EnergyGeneration,
-                          EnergyGenerationNuclear: e.target.value,
+                        handleDataChangeProduct("Default", {
+                          ...productData.Default,
+                          WearingApparelFurs: e.target.value,
                         })
                       }
                     />
@@ -1132,9 +1201,9 @@ const Measure = () => {
                       aria-label="Recipient's username"
                       aria-describedby="basic-addon2"
                       onChange={(e) =>
-                        handleDataChange("EnergyGeneration", {
-                          ...buildingData.EnergyGeneration,
-                          EnergyGenerationWind: e.target.value,
+                        handleDataChangeProduct("Default", {
+                          ...productData.Default,
+                          VegetableOilsandFats: e.target.value,
                         })
                       }
                     />
@@ -1146,10 +1215,9 @@ const Measure = () => {
                       aria-label="Recipient's username"
                       aria-describedby="basic-addon2"
                       onChange={(e) =>
-                        handleDataChange("EnergyGeneration", {
-                          ...buildingData.EnergyGeneration,
-                          EnergyGenerationPetroleumandOilDerivatives:
-                            e.target.value,
+                        handleDataChangeProduct("Default", {
+                          ...productData.Default,
+                          Sugar: e.target.value,
                         })
                       }
                     />
@@ -1161,9 +1229,9 @@ const Measure = () => {
                       aria-label="Recipient's username"
                       aria-describedby="basic-addon2"
                       onChange={(e) =>
-                        handleDataChange("EnergyGeneration", {
-                          ...buildingData.EnergyGeneration,
-                          EnergyGenerationNuclear: e.target.value,
+                        handleDataChangeProduct("Default", {
+                          ...productData.Default,
+                          ProcessedRice: e.target.value,
                         })
                       }
                     />
@@ -1175,9 +1243,9 @@ const Measure = () => {
                       aria-label="Recipient's username"
                       aria-describedby="basic-addon2"
                       onChange={(e) =>
-                        handleDataChange("EnergyGeneration", {
-                          ...buildingData.EnergyGeneration,
-                          EnergyGenerationWind: e.target.value,
+                        handleDataChangeProduct("Default", {
+                          ...productData.Default,
+                          MeatProducts: e.target.value,
                         })
                       }
                     />
@@ -1189,10 +1257,9 @@ const Measure = () => {
                       aria-label="Recipient's username"
                       aria-describedby="basic-addon2"
                       onChange={(e) =>
-                        handleDataChange("EnergyGeneration", {
-                          ...buildingData.EnergyGeneration,
-                          EnergyGenerationPetroleumandOilDerivatives:
-                            e.target.value,
+                        handleDataChangeProduct("Default", {
+                          ...productData.Default,
+                          LeatherandFootwear: e.target.value,
                         })
                       }
                     />
@@ -1204,9 +1271,9 @@ const Measure = () => {
                       aria-label="Recipient's username"
                       aria-describedby="basic-addon2"
                       onChange={(e) =>
-                        handleDataChange("EnergyGeneration", {
-                          ...buildingData.EnergyGeneration,
-                          EnergyGenerationNuclear: e.target.value,
+                        handleDataChangeProduct("Default", {
+                          ...productData.Default,
+                          FurnitureOtherManufacturedGoods: e.target.value,
                         })
                       }
                     />
@@ -1218,9 +1285,9 @@ const Measure = () => {
                       aria-label="Recipient's username"
                       aria-describedby="basic-addon2"
                       onChange={(e) =>
-                        handleDataChange("EnergyGeneration", {
-                          ...buildingData.EnergyGeneration,
-                          EnergyGenerationWind: e.target.value,
+                        handleDataChangeProduct("Default", {
+                          ...productData.Default,
+                          FoodProducts: e.target.value,
                         })
                       }
                     />
@@ -1232,10 +1299,9 @@ const Measure = () => {
                       aria-label="Recipient's username"
                       aria-describedby="basic-addon2"
                       onChange={(e) =>
-                        handleDataChange("EnergyGeneration", {
-                          ...buildingData.EnergyGeneration,
-                          EnergyGenerationPetroleumandOilDerivatives:
-                            e.target.value,
+                        handleDataChangeProduct("Default", {
+                          ...productData.Default,
+                          FishProducts: e.target.value,
                         })
                       }
                     />
@@ -1247,9 +1313,9 @@ const Measure = () => {
                       aria-label="Recipient's username"
                       aria-describedby="basic-addon2"
                       onChange={(e) =>
-                        handleDataChange("EnergyGeneration", {
-                          ...buildingData.EnergyGeneration,
-                          EnergyGenerationNuclear: e.target.value,
+                        handleDataChangeProduct("Default", {
+                          ...productData.Default,
+                          DairyProducts: e.target.value,
                         })
                       }
                     />
@@ -1261,9 +1327,9 @@ const Measure = () => {
                       aria-label="Recipient's username"
                       aria-describedby="basic-addon2"
                       onChange={(e) =>
-                        handleDataChange("EnergyGeneration", {
-                          ...buildingData.EnergyGeneration,
-                          EnergyGenerationWind: e.target.value,
+                        handleDataChangeProduct("Default", {
+                          ...productData.Default,
+                          Beverages: e.target.value,
                         })
                       }
                     />
@@ -1275,10 +1341,9 @@ const Measure = () => {
                       aria-label="Recipient's username"
                       aria-describedby="basic-addon2"
                       onChange={(e) =>
-                        handleDataChange("EnergyGeneration", {
-                          ...buildingData.EnergyGeneration,
-                          EnergyGenerationPetroleumandOilDerivatives:
-                            e.target.value,
+                        handleDataChangeProduct("Default", {
+                          ...productData.Default,
+                          PrivateHouseholdswithEmployedPersons: e.target.value,
                         })
                       }
                     />
