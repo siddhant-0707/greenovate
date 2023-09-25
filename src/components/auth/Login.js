@@ -12,7 +12,7 @@ function Login() {
   const [loginSuccess, setLoginSuccess] = useState(false);
   const navigator = useNavigate();
   if(loginSuccess){
-    navigator("/dashboard");
+    navigator("/dashboard/report");
   }
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -34,7 +34,7 @@ function Login() {
         if (response.status === 200) {
           setLoginSuccess(true);
           localStorage.setItem("token", response.data.token);
-          window.location.href = "/dashboard";
+          window.location.href = "/dashboard/report";
         }
       })
       .catch(function (error) {

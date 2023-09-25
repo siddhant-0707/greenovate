@@ -14,11 +14,11 @@ const Navbar = () => {
       {/* ... Your existing Navbar code ... */}
       <div className="collapse navbar-collapse" id="navbarNav">
         <ul className="navbar-nav">
-          <li className="nav-item">
+{/*           <li className="nav-item">
             <Link to={`/dashboard`} className="nav-link">
               Home
             </Link>
-          </li>
+          </li> */}
 
             <li className="nav-item">
               <Link to={`/dashboard/manage`} className="nav-link">
