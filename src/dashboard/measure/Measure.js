@@ -50,7 +50,7 @@ const Measure = () => {
     },
     Accomodation: { HotelandRestaurantServices: 0 },
   });
-  const [vehiclesData, setVehiclesData] = useState({
+/*   const [vehiclesData, setVehiclesData] = useState({
     quarter: 1,
     Car: { lpg: 0, cng: 0, ev: 0, gasoline: 0, diesel: 0 },
     Bus: {
@@ -74,7 +74,7 @@ const Measure = () => {
       Upstreamtransportationanddistribution: 0,
       Warehousingandsupportservicesfortransportation: 0,
     },
-  });
+  }); */
   const handleDataChange = (property, value) => {
     setBuildingData((prevState) => ({
       ...prevState,
@@ -84,7 +84,11 @@ const Measure = () => {
   return (
     <>
       <Navbar />
-      <Container fluid style={{ padding: "5rem 25rem 16rem",backgroundColor:"#F0F0F0" }} className={css.main}>
+      <Container
+        fluid
+        style={{ padding: "5rem 25rem 16rem", backgroundColor: "#F0F0F0" }}
+        className={css.main}
+      >
         <Row>
           <Row>
             <Col>
