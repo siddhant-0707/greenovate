@@ -36,14 +36,6 @@ const Measure = () => {
     const newFields = [...fields];
     newFields[index][name] = value;
 
-    // Calculate the resultant emission value based on your algorithm
-    // const calculatedResult = calculateResult(
-    //   newFields[index].emission,
-    //   newFields[index].spend
-    // );
-    // newFields[index].result = calculatedResult;
-
-    // setFields(newFields);
     const calculatedResult = calculateResult(value, index);
     newFields[index].result = calculatedResult;
 
