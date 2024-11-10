@@ -8,7 +8,7 @@ export default function YearWiseComponent() {
   useEffect(() => {
     const options = {
       method: "GET",
-      url: "https://greenovate-server.vercel.app/api/emission/year-wise-emission-sum",
+      url: "http://localhost:5000/api/emission/year-wise-emission-sum",
       headers: {
         Authorization: "Bearer " + localStorage.getItem("token"),
       },
@@ -23,7 +23,7 @@ export default function YearWiseComponent() {
       .catch(function (error) {
         console.error(error);
       });
-  }, []);
+  });
 
   const yearList = data.map((item) => item.year);
   const totalEmissions = data.map((item) => item.totalEmission);

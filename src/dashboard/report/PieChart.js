@@ -9,7 +9,7 @@ function PieChartComponent({ year }) {
     if (year) {
       const options = {
         method: "GET",
-        url: "https://greenovate-server.vercel.app/api/emission/factor-wise-emission-sum",
+        url: "http://localhost:5000/api/emission/factor-wise-emission-sum",
         params: { year: year },
         headers: {
           Authorization: "Bearer " + localStorage.getItem("token"),

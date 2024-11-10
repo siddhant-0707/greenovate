@@ -24,7 +24,7 @@ export default function Report() {
   useEffect(() => {
     const options = {
       method: "GET",
-      url: "https://greenovate-server.vercel.app/api/emission/year-wise-emission-sum",
+      url: "http://localhost:5000/api/emission/year-wise-emission-sum",
       headers: {
         Authorization: "Bearer " + localStorage.getItem("token"),
       },

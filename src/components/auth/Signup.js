@@ -20,7 +20,7 @@ function Signup() {
 
     const options = {
       method: "POST",
-      url: "https://greenovate-server.vercel.app/api/auth/signup",
+      url: "http://localhost:5000/api/auth/signup",
       headers: { "Content-Type": "application/json" },
       data: {
         email: email,
