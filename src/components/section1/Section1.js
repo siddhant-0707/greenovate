@@ -1,6 +1,5 @@
-import { React, useEffect } from "react";
+import { React } from "react";
 import css from "./section1.module.css";
-import { animateScroll as scroll } from "react-scroll";
 import { Container, Row } from "react-bootstrap";
 
 const Section1 = () => {

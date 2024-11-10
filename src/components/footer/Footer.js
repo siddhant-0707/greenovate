@@ -16,16 +16,16 @@ const Footer = () => {
             </div>
 
             <div>
-              <a href="" className="me-4 text-reset">
+              <a href="https://www.facebook.com" className="me-4 text-reset">
                 <FacebookIcon height={16} width={16} className={"bi bi-facebook"}/>
               </a>
-              <a href="" className="me-4 text-reset">
+              <a href="https://www.twitter.com" className="me-4 text-reset">
                 <TwitterIcon height={16} width={16} className={"bi bi-twitter"}/>
               </a>
-              <a href="" className="me-4 text-reset">
+              <a href="https://www.linkedin.com" className="me-4 text-reset">
                 <LinkedInIcon height={16} width={16} className={"bi bi-linkedin"}/>
               </a>
-              <a href="" className="me-4 text-reset">
+              <a href="https://www.instagram.com" className="me-4 text-reset">
                 <InstagramIcon height={16} width={16} className={"bi bi-instagram"}/>
               </a>
             </div>
@@ -127,7 +127,7 @@ const Footer = () => {
 
           <div className="text-center p-4" style={{color:"#c7dddf"}}>
             © 2023 Copyright:
-            <a className="text-reset fw-bold" href="">
+            <a className="text-reset fw-bold" href="https://www.greenovate.com">
               Greenovate
             </a>
           </div>
